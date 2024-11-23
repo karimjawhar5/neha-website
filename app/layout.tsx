@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Bebas_Neue, Open_Sans } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas' });
+const open = Open_Sans({ subsets: ['latin'], weight: ['300','400','600','700'], variable: '--font-open' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${bebas.variable} ${open.variable}`}>
+      <body>
         {children}
       </body>
     </html>
