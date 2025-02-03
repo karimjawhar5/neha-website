@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Bebas_Neue, Open_Sans } from 'next/font/google';
+// import { Bebas_Neue, Open_Sans } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import "./globals.css";
 
-const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas' });
-const open = Open_Sans({ subsets: ['latin'], weight: ['300','400','600','700'], variable: '--font-open' });
+const roboto = Roboto({
+  weight: ['300','400','500', '700','900'], // specify the weights you need
+  subsets: ['latin'],
+});
+
+// const bebas = Bebas_Neue({ subsets: ['latin'], weight: ['400'], variable: '--font-bebas' });
+// const open = Open_Sans({ subsets: ['latin'], weight: ['300','400','600','700'], variable: '--font-open' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bebas.variable} ${open.variable}`}>
-      <body>
+    <html lang="en">
+      <head>
+        <title>Neha Arora</title>
+      </head>
+      <body className={roboto.className}>
         {children}
       </body>
     </html>

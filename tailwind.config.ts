@@ -9,8 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['var(--font-bebas)', 'sans-serif'],
-        body: ['var(--font-open)', 'sans-serif'],
+        sans: ['Roboto', 'sans-serif'],
       },
     },
   },
