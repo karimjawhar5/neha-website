@@ -1,8 +1,11 @@
 import React from 'react'
+import SecondaryHero from '../components/SecondaryHero'
 
 function PhotographyPage() {
   return (
-    <div>page</div>
+    <div>
+      <SecondaryHero imageUrl='/hero/photography-hero.jpg'/>
+    </div>
   )
 }
 

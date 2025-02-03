@@ -2,7 +2,32 @@ import React from "react";
 
 const About: React.FC = () => {
   return (
-    <section className="mt-20 py-20 mx-auto max-w-screen-xl">
+    <section className="mt-20 py-20 mx-auto max-w-screen-lg">
+      <div className="flex flex-col md:flex-row gap-10">
+        {/* Left: Image Grid */}
+        <div className="w-1/2 grid grid-cols-2 grid-rows-2 grid-flow-col gap-4">
+        {/* Image 1 */}
+        <div
+          className="w-full h-48 bg-cover bg-center"
+          style={{ backgroundImage: "url('/about/image-1.jpg')" }}
+          aria-label="Creative shot 1"
+        ></div>
+
+        {/* Image 2 */}
+        <div
+          className="row-start-2 w-full h-48 bg-cover bg-center"
+          style={{ backgroundImage: "url('/about/image-3.jpg')" }}
+          aria-label="Creative shot 2"
+        ></div>
+
+        {/* Image 3 */}
+        <div
+          className="row-span-2 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: "url('/about/image-2.jpg')" }}
+          aria-label="Creative shot 3"
+        ></div>
+      </div>
+
         {/* Right: About Content */}
         <div className="w-1/2 flex flex-col space-y-6">
           <h2 className="text-4xl font-bold">ABOUT ME</h2>
@@ -42,7 +67,8 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
+import SecondaryHero from '../components/SecondaryHero';
 
 function FilmsPage() {
     const projects = [
@@ -8,7 +9,7 @@ function FilmsPage() {
     ];
     return (
         <div>
-            <h1>All Edits</h1>
+            <SecondaryHero imageUrl='/hero/films-hero.jpg'/>
             <ul>
                 {projects.map((project) => (
                     <li key={project.id}>

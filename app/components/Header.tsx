@@ -1,21 +1,35 @@
-import React from 'react'
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
-    <header className="flex justify-between p-6 bg-white">
-    <div>
-      <h1 className="text-4xl font-bold">Neha Arora</h1>
-      <p>Director, Editor, & Set Designer</p>
-    </div>
-    <nav className="space-x-6">
-      <Link href="/editor">Editor</Link>
-      <Link href="/director">Director</Link>
-      <Link href="/set-designer">Set Designer</Link>
-      <Link href="/creative-projects">Creative Projects</Link>
-    </nav>
-  </header>
-  )
-}
+    <header className="flex justify-between items-center w-full">
+      {/* Left: Title and Subtitle */}
+      <div>
+        <h1 className="font-heading text-8xl">NEHA ARORA</h1>
+        <p className="font-body text-lg font-light">Director, Editor, and Production Designer</p>
+      </div>
 
-export default Header
+      {/* Right: Navigation Menu */}
+      <nav className="font-body flex space-x-10">
+        <Link href="/edits" className="text-md font-bold hover:underline">
+          EDITS
+        </Link>
+        <Link href="/films" className="text-md font-bold hover:underline">
+          FILMS
+        </Link>
+        <Link href="/setdesign" className="text-md font-bold hover:underline">
+          SET DESIGN
+        </Link>
+        <Link href="/photography" className="text-md font-bold hover:underline">
+          PHOTOGRAPHY
+        </Link>
+        <Link href="/about" className="text-md font-bold hover:underline">
+          ABOUT ME
+        </Link>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
